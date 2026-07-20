@@ -130,20 +130,25 @@ code {
         <li>双击 <code>setup-hermes.bat</code> 弹窗输入 API Key</li>
         <li>约 15 分钟（含重启）</li>
       </ul>
-      <a class="btn" href="https://github.com/jinzhanxiang/hermes-installer/releases/download/v0.1.0/hermes-windows-wsl2.zip" download>📥 下载 hermes-windows-wsl2.zip (44 MB)</a>
+      <a class="btn" href="https://jinzhanxiang.github.io/hermes-installer/zips/hermes-windows-wsl2.zip" download>📥 下载 hermes-windows-wsl2.zip (44 MB)</a>
     </div>
 
     <div class="card">
       <span class="tag">🪟 备选 · 最快</span>
       <h2>Windows 原生路径</h2>
-      <div class="meta">202 MB · 全程离线</div>
+      <div class="meta">202 MB（分 3 卷） · 全程离线</div>
       <p class="desc">内置 Python 3.11 + 31 wheels + Git/Node/FFmpeg/rg，5 路径自动 failover。</p>
       <ul>
-        <li>解压 <code>hermes-windows-native.zip</code> 到 <code>D:\hermes</code>（避免中文路径）</li>
-        <li>双击 <code>setup-multi.bat</code> 弹窗输入 API Key</li>
+        <li>下载 <code>hermes-windows-native.zip.001</code>、<code>.002</code>、<code>.003</code> 到同一目录</li>
+        <li>命令提示符运行 <code style="background:rgba(0,0,0,0.4);padding:1px 5px;border-radius:3px">copy /b hermes-windows-native.zip.001+hermes-windows-native.zip.002+hermes-windows-native.zip.003 hermes-windows-native.zip</code></li>
+        <li>解压到 <code>D:\hermes</code>，双击 <code>setup-multi.bat</code></li>
         <li>约 3-10 分钟</li>
       </ul>
-      <a class="btn" href="https://github.com/jinzhanxiang/hermes-installer/releases/download/v0.1.0/hermes-windows-native.zip" download>📥 下载 hermes-windows-native.zip (202 MB)</a>
+      <div style="display:flex;gap:6px;flex-wrap:wrap">
+        <a class="btn" style="flex:1" href="https://jinzhanxiang.github.io/hermes-installer/zips/hermes-windows-native.zip.001" download>📥 part1 (67 MB)</a>
+        <a class="btn" style="flex:1" href="https://jinzhanxiang.github.io/hermes-installer/zips/hermes-windows-native.zip.002" download>📥 part2 (67 MB)</a>
+        <a class="btn" style="flex:1" href="https://jinzhanxiang.github.io/hermes-installer/zips/hermes-windows-native.zip.003" download>📥 part3 (67 MB)</a>
+      </div>
     </div>
 
     <div class="card">
@@ -156,7 +161,7 @@ code {
         <li>终端运行 <code>bash install-hermes官方.sh</code></li>
         <li>约 20 分钟</li>
       </ul>
-      <a class="btn" href="https://github.com/jinzhanxiang/hermes-installer/releases/download/v0.1.0/hermes-mac-linux.zip" download>📥 下载 hermes-mac-linux.zip (64 MB)</a>
+      <a class="btn" href="https://jinzhanxiang.github.io/hermes-installer/zips/hermes-mac-linux.zip" download>📥 下载 hermes-mac-linux.zip (64 MB)</a>
     </div>
 
     <div class="card">
@@ -169,13 +174,13 @@ code {
         <li>02 纵横分析法（多角度研报）</li>
         <li>03 思维导图（结构化输出）</li>
       </ul>
-      <a class="btn secondary" href="https://github.com/jinzhanxiang/hermes-installer/releases/download/v0.1.0/hermes-skills-pack.zip" download>📥 下载 hermes-skills-pack.zip (384 KB)</a>
+      <a class="btn secondary" href="https://jinzhanxiang.github.io/hermes-installer/zips/hermes-skills-pack.zip" download>📥 下载 hermes-skills-pack.zip (384 KB)</a>
     </div>
   </div>
 
   <div class="alert">
     <strong>⚠ 离线包使用说明：</strong>
-    所有 zip 永久托管在 GitHub Releases（含 Python 解释器、31 wheels、Ubuntu 镜像等），**除可选联网路径外无需访问公网**。
+    所有 zip 永久托管在 GitHub Pages + Releases（CDN 加速）。小文件（≤64MB）走 Pages 直链，大文件（202MB Windows 原生）拆分为 3 个分卷，合并后即可解压。
     Windows 用户请解压后右键 <code>.bat</code> 文件 → 「以管理员身份运行」；如遇 Windows Defender 拦截，选择「更多信息 → 仍要运行」即可。
     GitHub Release: <a href="https://github.com/jinzhanxiang/hermes-installer/releases/tag/v0.1.0" style="color: var(--accent)" target="_blank">v0.1.0 离线包下载页</a> · 4 平台分流总 317 MB。
   </div>
