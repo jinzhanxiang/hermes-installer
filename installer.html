@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hermes Agent 离线安装包下载 · 智能体内训课件</title>
+<style>
+:root {
+  --bg: #0A0E27;
+  --card: rgba(15, 23, 42, 0.85);
+  --border: rgba(6, 182, 212, 0.35);
+  --text: #E2E8F0;
+  --muted: #94A3B8;
+  --accent: #06b6d4;
+  --good: #22C55E;
+  --warn: #F59E0B;
+  --purple: #A855F7;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: radial-gradient(ellipse at top, rgba(6, 182, 212, 0.12), transparent 50%), var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  padding: 32px 16px 64px;
+}
+.container { max-width: 920px; margin: 0 auto; }
+header { text-align: center; margin-bottom: 28px; }
+.badge {
+  display: inline-block;
+  font-size: 13px;
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  border-radius: 12px;
+  background: rgba(6, 182, 212, 0.12);
+  border: 1px solid rgba(6, 182, 212, 0.35);
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+h1 { font-size: 30px; margin: 0 0 6px; color: #fff; }
+.subtitle { font-size: 15px; color: var(--muted); margin: 0; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 18px 14px;
+  display: flex;
+  flex-direction: column;
+}
+.card .tag {
+  font-size: 12px;
+  letter-spacing: 1px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgba(34, 197, 94, 0.15);
+  color: var(--good);
+  display: inline-block;
+  margin-bottom: 8px;
+}
+.card.recommend .tag { background: rgba(245, 158, 11, 0.18); color: var(--warn); }
+.card h2 { margin: 0 0 4px; font-size: 19px; color: #fff; }
+.card .meta { font-size: 12px; color: var(--muted); margin-bottom: 8px; }
+.card .desc { font-size: 13.5px; line-height: 1.55; color: var(--text); margin-bottom: 10px; }
+.card ul { font-size: 13px; color: var(--muted); padding-left: 18px; margin: 0 0 12px; line-height: 1.6; }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  background: linear-gradient(135deg, var(--accent), #0891B2);
+  color: #021018;
+  border: none;
+  cursor: pointer;
+  margin-top: auto;
+}
+.btn:hover { filter: brightness(1.1); }
+.btn.secondary { background: rgba(168, 85, 247, 0.18); color: var(--purple); border: 1px solid rgba(168, 85, 247, 0.4); }
+footer {
+  margin-top: 36px;
+  text-align: center;
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.alert {
+  margin-top: 28px;
+  background: rgba(245, 158, 11, 0.08);
+  border-left: 3px solid var(--warn);
+  padding: 12px 16px;
+  border-radius: 4px;
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--text);
+}
+.alert strong { color: var(--warn); }
+code {
+  background: rgba(0, 0, 0, 0.35);
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-family: 'JetBrains Mono', Menlo, monospace;
+  font-size: 13px;
+  color: #FCD34D;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <span class="badge">📦 Hermes Agent 离线安装包</span>
+    <h1>扫描 / 点击下载离线安装包</h1>
+    <p class="subtitle">智能体内训课件 · 适用于 Windows / Mac / Linux 三大平台</p>
+  </header>
+
+  <div class="cards">
+    <div class="card recommend">
+      <span class="tag">🪟 推荐 · 体验最完整</span>
+      <h2>Windows WSL2 路径</h2>
+      <div class="meta">总大小 ≈ 120 MB · 全程离线</div>
+      <p class="desc">含 WSL2 内核 + Ubuntu 24.04 镜像 + Python 3.11 + 29 依赖包，6 项环境自动检测。</p>
+      <ul>
+        <li>右键 <code>install-wsl2.bat</code> 以管理员身份运行</li>
+        <li>双击 <code>setup-hermes.bat</code> 弹窗输入 API Key</li>
+        <li>约 15 分钟（含重启）</li>
+      </ul>
+      <a class="btn" href="./hermes-installer/2-WSL2安装/install-wsl2.bat" download>📥 下载 install-wsl2.bat</a>
+    </div>
+
+    <div class="card">
+      <span class="tag">🪟 备选 · 最快</span>
+      <h2>Windows 原生路径</h2>
+      <div class="meta">总大小 ≈ 30 MB · 全程离线</div>
+      <p class="desc">内置 Python 3.11 + 29 依赖包 + Git/Node/FFmpeg/rg，5 路径自动 failover。</p>
+      <ul>
+        <li>解压到 <code>D:\hermes</code>（避免中文路径）</li>
+        <li>双击 <code>setup-multi.bat</code> 弹窗输入 API Key</li>
+        <li>约 3-10 分钟</li>
+      </ul>
+      <a class="btn" href="./hermes-installer/1-Windows原生安装/setup-multi.bat" download>📥 下载 setup-multi.bat</a>
+    </div>
+
+    <div class="card">
+      <span class="tag">🍎 Mac / Linux</span>
+      <h2>macOS / Linux 路径</h2>
+      <div class="meta">终端 3 条命令 · 约 20 分钟</div>
+      <p class="desc">通过 Git + pip 安装，需要 Python 3.11+ 环境，依赖项按需下载。</p>
+      <ul>
+        <li><code>git clone &lt;repo-url&gt; &amp;&amp; cd hermes-agent</code></li>
+        <li><code>pip install -e .</code></li>
+        <li><code>python -m hermes_cli.main gateway run --replace</code></li>
+      </ul>
+      <a class="btn secondary" href="./hermes-installer/hermes-agent-README.md">📖 阅读完整教程</a>
+    </div>
+
+    <div class="card">
+      <span class="tag">📚 6 大技能包</span>
+      <h2>技能包（可选）</h2>
+      <div class="meta">信息搜索 / 纵横分析 / 思维导图</div>
+      <p class="desc">装好 Agent 后单独安装的 6 大技能包，按团队场景选择。</p>
+      <ul>
+        <li>01 信息搜索三件套（搜索 / 抓取 / 摘要）</li>
+        <li>02 纵横分析法（多角度研报）</li>
+        <li>03 思维导图（结构化输出）</li>
+      </ul>
+      <a class="btn secondary" href="./hermes-installer/3-6大技能包/README.md">📖 查看技能包说明</a>
+    </div>
+  </div>
+
+  <div class="alert">
+    <strong>⚠ 离线包使用说明：</strong>
+    所有路径均含完整离线资源（Python 解释器、29 个 wheels、Ubuntu 镜像等），除可选联网路径外无需访问公网。
+    Windows 用户请右键 <code>.bat</code> 文件 → 「以管理员身份运行」；如遇 Windows Defender 拦截，选择「更多信息 → 仍要运行」即可。
+    详细排错与多路径安装文档见 <a href="./hermes-installer/INSTALL-完整教程.md" style="color: var(--accent)">INSTALL-完整教程.md</a>。
+  </div>
+
+  <footer>
+    © 2026 智能体内训课件 · Hermes Agent 内训版<br/>
+    <span style="color: var(--muted)">v0.1 · 532 MB · 平台：Windows 10/11 · macOS 12+ · Ubuntu 22.04+</span>
+  </footer>
+</div>
+</body>
+</html>
