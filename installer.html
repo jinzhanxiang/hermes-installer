@@ -122,66 +122,68 @@ code {
     <div class="card recommend">
       <span class="tag">🪟 推荐 · 体验最完整</span>
       <h2>Windows WSL2 路径</h2>
-      <div class="meta">总大小 ≈ 120 MB · 全程离线</div>
-      <p class="desc">含 WSL2 内核 + Ubuntu 24.04 镜像 + Python 3.11 + 29 依赖包，6 项环境自动检测。</p>
+      <div class="meta">44 MB · 全程离线</div>
+      <p class="desc">含 WSL2 内核 + Ubuntu 24.04 镜像 + Python 3.11 + 6 项环境自动检测。</p>
       <ul>
+        <li>解压 <code>hermes-windows-wsl2.zip</code> 到 <code>D:\hermes</code>（避免中文路径）</li>
         <li>右键 <code>install-wsl2.bat</code> 以管理员身份运行</li>
         <li>双击 <code>setup-hermes.bat</code> 弹窗输入 API Key</li>
         <li>约 15 分钟（含重启）</li>
       </ul>
-      <a class="btn" href="./hermes-installer/2-WSL2安装/install-wsl2.bat" download>📥 下载 install-wsl2.bat</a>
+      <a class="btn" href="https://github.com/jinzhanxiang/hermes-installer/releases/download/v0.1.0/hermes-windows-wsl2.zip" download>📥 下载 hermes-windows-wsl2.zip (44 MB)</a>
     </div>
 
     <div class="card">
       <span class="tag">🪟 备选 · 最快</span>
       <h2>Windows 原生路径</h2>
-      <div class="meta">总大小 ≈ 30 MB · 全程离线</div>
-      <p class="desc">内置 Python 3.11 + 29 依赖包 + Git/Node/FFmpeg/rg，5 路径自动 failover。</p>
+      <div class="meta">202 MB · 全程离线</div>
+      <p class="desc">内置 Python 3.11 + 31 wheels + Git/Node/FFmpeg/rg，5 路径自动 failover。</p>
       <ul>
-        <li>解压到 <code>D:\hermes</code>（避免中文路径）</li>
+        <li>解压 <code>hermes-windows-native.zip</code> 到 <code>D:\hermes</code>（避免中文路径）</li>
         <li>双击 <code>setup-multi.bat</code> 弹窗输入 API Key</li>
         <li>约 3-10 分钟</li>
       </ul>
-      <a class="btn" href="./hermes-installer/1-Windows原生安装/setup-multi.bat" download>📥 下载 setup-multi.bat</a>
+      <a class="btn" href="https://github.com/jinzhanxiang/hermes-installer/releases/download/v0.1.0/hermes-windows-native.zip" download>📥 下载 hermes-windows-native.zip (202 MB)</a>
     </div>
 
     <div class="card">
       <span class="tag">🍎 Mac / Linux</span>
       <h2>macOS / Linux 路径</h2>
-      <div class="meta">终端 3 条命令 · 约 20 分钟</div>
-      <p class="desc">通过 Git + pip 安装，需要 Python 3.11+ 环境，依赖项按需下载。</p>
+      <div class="meta">64 MB · 终端一键安装</div>
+      <p class="desc">含 hermes-agent 源码 + 官方安装脚本，需要 Python 3.11+ 环境。</p>
       <ul>
-        <li><code>git clone &lt;repo-url&gt; &amp;&amp; cd hermes-agent</code></li>
-        <li><code>pip install -e .</code></li>
-        <li><code>python -m hermes_cli.main gateway run --replace</code></li>
+        <li>解压 <code>hermes-mac-linux.zip</code></li>
+        <li>终端运行 <code>bash install-hermes官方.sh</code></li>
+        <li>约 20 分钟</li>
       </ul>
-      <a class="btn secondary" href="./hermes-installer/hermes-agent-README.md">📖 阅读完整教程</a>
+      <a class="btn" href="https://github.com/jinzhanxiang/hermes-installer/releases/download/v0.1.0/hermes-mac-linux.zip" download>📥 下载 hermes-mac-linux.zip (64 MB)</a>
     </div>
 
     <div class="card">
       <span class="tag">📚 6 大技能包</span>
       <h2>技能包（可选）</h2>
-      <div class="meta">信息搜索 / 纵横分析 / 思维导图</div>
+      <div class="meta">384 KB · 信息搜索 / 纵横分析 / 思维导图</div>
       <p class="desc">装好 Agent 后单独安装的 6 大技能包，按团队场景选择。</p>
       <ul>
         <li>01 信息搜索三件套（搜索 / 抓取 / 摘要）</li>
         <li>02 纵横分析法（多角度研报）</li>
         <li>03 思维导图（结构化输出）</li>
       </ul>
-      <a class="btn secondary" href="./hermes-installer/3-6大技能包/README.md">📖 查看技能包说明</a>
+      <a class="btn secondary" href="https://github.com/jinzhanxiang/hermes-installer/releases/download/v0.1.0/hermes-skills-pack.zip" download>📥 下载 hermes-skills-pack.zip (384 KB)</a>
     </div>
   </div>
 
   <div class="alert">
     <strong>⚠ 离线包使用说明：</strong>
-    所有路径均含完整离线资源（Python 解释器、29 个 wheels、Ubuntu 镜像等），除可选联网路径外无需访问公网。
-    Windows 用户请右键 <code>.bat</code> 文件 → 「以管理员身份运行」；如遇 Windows Defender 拦截，选择「更多信息 → 仍要运行」即可。
-    详细排错与多路径安装文档见 <a href="./hermes-installer/INSTALL-完整教程.md" style="color: var(--accent)">INSTALL-完整教程.md</a>。
+    所有 zip 永久托管在 GitHub Releases（含 Python 解释器、31 wheels、Ubuntu 镜像等），**除可选联网路径外无需访问公网**。
+    Windows 用户请解压后右键 <code>.bat</code> 文件 → 「以管理员身份运行」；如遇 Windows Defender 拦截，选择「更多信息 → 仍要运行」即可。
+    GitHub Release: <a href="https://github.com/jinzhanxiang/hermes-installer/releases/tag/v0.1.0" style="color: var(--accent)" target="_blank">v0.1.0 离线包下载页</a> · 4 平台分流总 317 MB。
+  </div>
   </div>
 
   <footer>
     © 2026 智能体内训课件 · Hermes Agent 内训版<br/>
-    <span style="color: var(--muted)">v0.1 · 532 MB · 平台：Windows 10/11 · macOS 12+ · Ubuntu 22.04+</span>
+    <span style="color: var(--muted)">v0.1 · 4 平台分流共 310 MB · 平台：Windows 10/11 · macOS 12+ · Ubuntu 22.04+ · <a href="https://github.com/jinzhanxiang/hermes-installer/releases/tag/v0.1.0" style="color: var(--accent)" target="_blank">GitHub Releases</a></span>
   </footer>
 </div>
 </body>
